@@ -1,0 +1,15 @@
+{
+  "title": "Lịch Âm Dương",
+  "description": "Tải lịch tháng (dương + âm lịch) làm màn hình ngủ mỗi lần máy ngủ.",
+  "author": "dthuc267",
+  "version": "1.0.0",
+  "events": {
+    "sleep.enter": {
+      "download": {
+        "url": "https://raw.githubusercontent.com/dthuc267/lich-am-crosspoint-plugin/wallpaper/current.bmp",
+        "dest": "/sleep.bmp"
+      },
+      "toast": "Đã cập nhật lịch"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "lich-am",
+  "title": "Lịch Âm Dương",
+  "description": "Lịch tháng tiếng Việt có âm lịch, can chi và ngày lễ làm màn hình ngủ; tự cập nhật mỗi lần máy ngủ.",
+  "author": "dthuc267",
+  "version": "1.0.0",
+  "files": [
+    "manifest.json",
+    "device.json",
+    "README.md"
+  ]
+}

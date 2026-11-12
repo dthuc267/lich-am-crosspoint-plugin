@@ -1,0 +1,26 @@
+name: wallpaper
+on:
+  schedule:
+    - cron: "2 17 * * *" # 00:02 giờ Việt Nam
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python tools/render.py --out out
+      - name: Đẩy ảnh lên nhánh wallpaper
+        run: |
+          cd out
+          git init -q -b wallpaper
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "Lịch $(TZ=Asia/Ho_Chi_Minh date +%F)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" wallpaper
