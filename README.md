@@ -17,4 +17,4 @@ lên nhánh `wallpaper`, máy đọc tải thẳng từ đó.
 2. Để Plugin Hub tự nhận: gắn topic `crosspoint-plugin` và tạo Release có tag
    trùng `version` trong manifest (`1.0.0`).
 
-Phông chữ Be Vietnam Pro, giấy phép OFL (`tools/fonts/OFL.txt`).
+Phông chữ Tektur, giấy phép OFL (`tools/fonts/OFL-Tektur.txt`).
